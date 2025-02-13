@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국소방안전원</title>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="SHORTCUT ICON" href="./assets/images/k6.ico" />
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div id="headerMenu"></div>
+    <div class="kfsi">
+      <div id="header"></div>
+      <div id="kfsi-body">
+        <div class="kfsi-user">
+          <h1 class="hide">외출 신청/취소</h1>
+          <div class="kfsi-user-detail">
+            <div class="kfsi-user-detail-head">
+              <p>
+                <strong>1급소방안전관리자<span>(혼용)</span></strong
+                >전북지부
+              </p>
+              집합교육:2025.04.14~2025.04.18 (09:00~18:00)
+            </div>
+            <div class="kfsi-user-detail-table">
+              <div class="kfsi-user-detail-table-text">
+                <p>
+                  총 외출한 시간 <strong>3</strong>시간 (남은 외출 가능시간
+                  <strong class="text-info">7</strong>시간)<br />
+                  <span>
+                    ※ 해당 교육은 총 10시간 까지만 외출이 인정되는
+                    교육입니다.<br />
+                    총 외출 가능시간을 초과하지 않도록 출석에 유의해 주세요.
+                  </span>
+                </p>
+              </div>
+              <div class="kfsi-tab01 kfsi-tab01--mo-grid2">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="tab01"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab01-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab01-pane"
+                      aria-selected="true"
+                    >
+                      내역 및 신청
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="tab02"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab02-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab02-pane"
+                      aria-selected="false"
+                    >
+                      신청 취소
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane fade show active"
+                    id="tab01-pane"
+                    role="tabpanel"
+                    aria-labelledby="tab01"
+                    tabindex="0"
+                  >
+                    <div>
+                      <table class="table-sm">
+                        <thead>
+                          <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">
+                              1일차<br />
+                              (04/14)
+                            </th>
+                            <th scope="col">
+                              2일차<br />
+                              (04/15)
+                            </th>
+                            <th scope="col">
+                              3일차<br />
+                              (04/16)
+                            </th>
+                            <th scope="col">
+                              4일차<br />
+                              (04/17)
+                            </th>
+                            <th scope="col">
+                              5일차<br />
+                              (04/18)
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                              1교시<br />
+                              <span class="text-666"> (09:00~) </span>
+                            </th>
+                            <td><i class="user-ico-o"></i></td>
+                            <td><i class="user-ico-x"></i></td>
+                            <td><i class="user-ico-o"></i></td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-primary text-white">
+                              <strong>승인됨</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              2교시<br />
+                              <span class="text-666"> (10:00~) </span>
+                            </th>
+                            <td><i class="user-ico-o"></i></td>
+                            <td><i class="user-ico-x"></i></td>
+                            <td><i class="user-ico-o"></i></td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-primary text-white">
+                              <strong>승인됨</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              3교시<br />
+                              <span class="text-666"> (11:00~) </span>
+                            </th>
+                            <td><i class="user-ico-o"></i></td>
+                            <td><i class="user-ico-x"></i></td>
+                            <td><i class="user-ico-o"></i></td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-primary text-white">
+                              <strong>승인됨</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              4교시<br />
+                              <span class="text-666"> (13:00~) </span>
+                            </th>
+                            <td><i class="user-ico-o"></i></td>
+                            <td><i class="user-ico-x"></i></td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              5교시<br />
+                              <span class="text-666"> (14:00~) </span>
+                            </th>
+                            <td><i class="user-ico-o"></i></td>
+                            <td><i class="user-ico-x"></i></td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              6교시<br />
+                              <span class="text-666"> (15:00~) </span>
+                            </th>
+                            <td><i class="user-ico-o"></i></td>
+                            <td><i class="user-ico-x"></i></td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              7교시<br />
+                              <span class="text-666"> (16:00~) </span>
+                            </th>
+                            <td><i class="user-ico-o"></i></td>
+                            <td><i class="user-ico-x"></i></td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-warning-subtle">승인 대기</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              8교시<br />
+                              <span class="text-666"> (17:00~) </span>
+                            </th>
+                            <td><i class="user-ico-o"></i></td>
+                            <td><i class="user-ico-x"></i></td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-warning-subtle">승인 대기</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="mt-5">
+                      <table class="table-sm">
+                        <thead>
+                          <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">
+                              6일차<br />
+                              (04/21)
+                            </th>
+                            <th scope="col">
+                              7일차<br />
+                              (04/22)
+                            </th>
+                            <th scope="col">
+                              8일차<br />
+                              (04/23)
+                            </th>
+                            <th scope="col">
+                              9일차<br />
+                              (04/24)
+                            </th>
+                            <th scope="col">
+                              10일차<br />
+                              (04/25)
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                              1교시<br />
+                              <span class="text-666"> (09:00~) </span>
+                            </th>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              2교시<br />
+                              <span class="text-666"> (10:00~) </span>
+                            </th>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              3교시<br />
+                              <span class="text-666"> (11:00~) </span>
+                            </th>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              4교시<br />
+                              <span class="text-666"> (13:00~) </span>
+                            </th>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              5교시<br />
+                              <span class="text-666"> (14:00~) </span>
+                            </th>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              6교시<br />
+                              <span class="text-666"> (15:00~) </span>
+                            </th>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              7교시<br />
+                              <span class="text-666"> (16:00~) </span>
+                            </th>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              8교시<br />
+                              <span class="text-666"> (17:00~) </span>
+                            </th>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                            <td class="bg-secondary-subtle">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                value=""
+                                aria-label="..."
+                              />
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="tab02-pane"
+                    role="tabpanel"
+                    aria-labelledby="tab02"
+                    tabindex="0"
+                  >
+                    외출 신청 취소는 오늘 기준 도래하지 않은 신청 건에 건에
+                    한해서만 취소신청이 가능합니다.
+                    <div class="mt-7">
+                      <h4 class="kfsi-h4">승인된 외출 내역</h4>
+                      <div class="kfsi-user-detail-list">
+                        <ul>
+                          <li>
+                            04월 17일 : 1,2,3교시
+                            <button
+                              type="button"
+                              class="btn btn-outline-secondary"
+                            >
+                              신청취소
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="mt-7">
+                      <h4 class="kfsi-h4">승인대기 외출 내역</h4>
+                      <div class="kfsi-user-detail-list">
+                        <ul>
+                          <li>
+                            04월 18일 : 7,8교시
+                            <button
+                              type="button"
+                              class="btn btn-outline-secondary"
+                            >
+                              신청취소
+                            </button>
+                          </li>
+                          <li>
+                            04월 22일 : 6,7,8교시
+                            <button
+                              type="button"
+                              class="btn btn-outline-secondary"
+                            >
+                              신청취소
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

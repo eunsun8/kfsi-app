@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국소방안전원</title>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="SHORTCUT ICON" href="./assets/images/k6.ico" />
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="kfsi-dashboard">
+      <div class="row">
+        <div class="col-9">
+          <div class="row" style="margin-bottom: 20px">
+            <div class="col-6">
+              <div class="kfsi-dashboard-notice">
+                <div class="card">
+                  <div class="card-body">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link active"
+                          id="notice-tab01"
+                          data-bs-toggle="tab"
+                          data-bs-target="#notice-tab01-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="notice-tab01-pane"
+                          aria-selected="true"
+                        >
+                          공지사항
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="notice-tab02"
+                          data-bs-toggle="tab"
+                          data-bs-target="#notice-tab02-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="notice-tab02-pane"
+                          aria-selected="false"
+                        >
+                          지부공지
+                        </button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="notice-tab01-pane"
+                        role="tabpanel"
+                        aria-labelledby="notice-tab01"
+                        tabindex="0"
+                      >
+                        <a href="">
+                          <span>2024.11.07</span>
+                          <p>민원시스템 사용관련 공지</p>
+                          <strong>N</strong>
+                        </a>
+                        <a href="">
+                          <span>2024.09.12</span>
+                          <p>시스템 사용안내 (정기점검)</p>
+                        </a>
+                        <a href="">
+                          <span>2024.09.01</span>
+                          <p>소방안전관리자 시험위원 후보자 모집 안내</p>
+                        </a>
+                        <a href="">
+                          <span>2024.08.14</span>
+                          <p>
+                            특급소방안전관리자 강습교육 일정 변경 안내
+                            특급소방안전관리자 강습교육 일정 변경 안내
+                            특급소방안전관리자 강습교육 일정 변경 안내
+                            특급소방안전관리자 강습교육 일정 변경 안내
+                          </p>
+                        </a>
+                        <a href="">
+                          <span>2024.08.07</span>
+                          <p>소방안전관리자 시험위원 후보자 모집 안내</p>
+                        </a>
+                        <a href="">
+                          <span>2024.08.07</span>
+                          <p>소방안전관리자 시험위원 후보자 모집 안내</p>
+                        </a>
+                        <a href="">
+                          <span>2024.08.07</span>
+                          <p>소방안전관리자 시험위원 후보자 모집 안내</p>
+                        </a>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="notice-tab02-pane"
+                        role="tabpanel"
+                        aria-labelledby="notice-tab02"
+                        tabindex="0"
+                      >
+                        ...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="kfsi-dashboard-my">
+                <h3>내 정보 바로가기</h3>
+                <div class="kfsi-dashboard-my-list">
+                  <div class="kfsi-dashboard-my-list-item">
+                    <a href="">
+                      <strong>
+                        <i class="my-expenses"></i>
+                      </strong>
+                      <span>지출결의</span>
+                    </a>
+                    <button class="kfsi-dashboard-my-list-item-delete">
+                      삭제
+                    </button>
+                  </div>
+                  <div class="kfsi-dashboard-my-list-item">
+                    <a href="">
+                      <strong>
+                        <i class="my-certificate"></i>
+                      </strong>
+                      <span>증명서</span>
+                    </a>
+                    <button class="kfsi-dashboard-my-list-item-delete">
+                      삭제
+                    </button>
+                  </div>
+                  <div class="kfsi-dashboard-my-list-item">
+                    <a href="">
+                      <strong>
+                        <i class="my-calendar"></i>
+                      </strong>
+                      <span>휴가/외출</span>
+                    </a>
+                    <button class="kfsi-dashboard-my-list-item-delete">
+                      삭제
+                    </button>
+                  </div>
+                  <div class="kfsi-dashboard-my-list-item">
+                    <a href="">
+                      <strong>
+                        <i class="my-personnel"></i>
+                      </strong>
+                      <span>인사</span>
+                    </a>
+                    <button class="kfsi-dashboard-my-list-item-delete">
+                      삭제
+                    </button>
+                  </div>
+                  <div class="kfsi-dashboard-my-list-item">
+                    <a href="">
+                      <strong>
+                        <i class="my-welfare"></i>
+                      </strong>
+                      <span>복지</span>
+                    </a>
+                    <button class="kfsi-dashboard-my-list-item-delete">
+                      삭제
+                    </button>
+                  </div>
+                  <div class="kfsi-dashboard-my-list-item">
+                    <a href="">
+                      <strong>
+                        <i class="my-business"></i>
+                      </strong>
+                      <span>출장</span>
+                    </a>
+                    <button class="kfsi-dashboard-my-list-item-delete">
+                      삭제
+                    </button>
+                  </div>
+                  <div class="kfsi-dashboard-my-list-item">
+                    <a href="">
+                      <strong>
+                        <i class="my-setting"></i>
+                      </strong>
+                      <span>내정보</span>
+                    </a>
+                    <button class="kfsi-dashboard-my-list-item-delete">
+                      삭제
+                    </button>
+                  </div>
+                  <div class="kfsi-dashboard-my-list-item">
+                    <button class="kfsi-dashboard-my-list-item-add">
+                      추가
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="kfsi-dashboard-status">
+                <div class="card">
+                  <div class="card-header">
+                    전자결재
+                    <button>삭제</button>
+                  </div>
+                  <div class="card-body">
+                    <div class="kfsi-dashboard-status-cases">
+                      <dl class="bg-primary">
+                        <dt>02</dt>
+                        <dd>미결건수</dd>
+                      </dl>
+                      <dl class="bg-success">
+                        <dt>05</dt>
+                        <dd>진행건수</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    중요공람
+                    <button>삭제</button>
+                  </div>
+                  <div class="card-body">
+                    <div class="kfsi-dashboard-status-cases">
+                      <dl class="bg-primary">
+                        <dt>01</dt>
+                        <dd>미결건수</dd>
+                      </dl>
+                      <dl class="bg-success">
+                        <dt>13</dt>
+                        <dd>진행건수</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    이메일
+                    <button>삭제</button>
+                  </div>
+                  <div class="card-body">
+                    <div class="kfsi-dashboard-status-cases">
+                      <dl class="bg-primary">
+                        <dt>24</dt>
+                        <dd>미결건수</dd>
+                      </dl>
+                      <dl class="bg-success">
+                        <dt>99</dt>
+                        <dd>진행건수</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    시스템 상태
+                    <button>삭제</button>
+                  </div>
+                  <div class="card-body"></div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <button class="kfsi-dashboard-status-add">
+                      <span>추가</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <button class="kfsi-dashboard-status-add">
+                      <span>추가</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <button class="kfsi-dashboard-status-add">
+                      <span>추가</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <button class="kfsi-dashboard-status-add">
+                      <span>추가</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <button class="kfsi-dashboard-status-add">
+                      <span>추가</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <button class="kfsi-dashboard-status-add">
+                      <span>추가</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="schedule-tab01"
+                  data-bs-toggle="tab"
+                  data-bs-target="#schedule-tab01-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="schedule-tab01-pane"
+                  aria-selected="true"
+                >
+                  본부
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="schedule-tab02"
+                  data-bs-toggle="tab"
+                  data-bs-target="#schedule-tab02-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="schedule-tab02-pane"
+                  aria-selected="false"
+                >
+                  지부
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="schedule-tab03"
+                  data-bs-toggle="tab"
+                  data-bs-target="#schedule-tab03-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="schedule-tab03-pane"
+                  aria-selected="false"
+                >
+                  개인
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="schedule-tab01-pane"
+                role="tabpanel"
+                aria-labelledby="schedule-tab01"
+                tabindex="0"
+              >
+                <a href="">
+                  <span>2024.11.07</span>
+                  <p>민원시스템 사용관련 공지</p>
+                  <strong>N</strong>
+                </a>
+                <a href="">
+                  <span>2024.09.12</span>
+                  <p>시스템 사용안내 (정기점검)</p>
+                </a>
+                <a href="">
+                  <span>2024.09.01</span>
+                  <p>소방안전관리자 시험위원 후보자 모집 안내</p>
+                </a>
+                <a href="">
+                  <span>2024.08.14</span>
+                  <p>
+                    특급소방안전관리자 강습교육 일정 변경 안내
+                    특급소방안전관리자 강습교육 일정 변경 안내
+                    특급소방안전관리자 강습교육 일정 변경 안내
+                    특급소방안전관리자 강습교육 일정 변경 안내
+                  </p>
+                </a>
+                <a href="">
+                  <span>2024.08.07</span>
+                  <p>소방안전관리자 시험위원 후보자 모집 안내</p>
+                </a>
+                <a href="">
+                  <span>2024.08.07</span>
+                  <p>소방안전관리자 시험위원 후보자 모집 안내</p>
+                </a>
+                <a href="">
+                  <span>2024.08.07</span>
+                  <p>소방안전관리자 시험위원 후보자 모집 안내</p>
+                </a>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="schedule-tab02-pane"
+                role="tabpanel"
+                aria-labelledby="schedule-tab02"
+                tabindex="0"
+              >
+                ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="schedule-tab03-pane"
+                role="tabpanel"
+                aria-labelledby="schedule-tab03"
+                tabindex="0"
+              >
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

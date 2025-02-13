@@ -1,0 +1,12 @@
+$mobileWidth: 3992px;
+@mixin text-clamp($lines: 2, $line-height: false) {
+  display: -webkit-box;
+  overflow: hidden;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  word-break: break-all;
+  @if $line-height {
+    max-height: $line-height * $lines * 1rem;
+  }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국소방안전원</title>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="SHORTCUT ICON" href="./assets/images/k6.ico" />
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div id="headerMenu"></div>
+    <div class="kfsi">
+      <div id="header"></div>
+      <div id="kfsi-body">
+        <div class="kfsi-user">
+          <h1 class="hide">출석 체크</h1>
+          <div class="kfsi-user-attend">
+            <div>
+              <h4 class="kfsi-h4">출석 체크할 내 교육정보를 확인해 주세요.</h4>
+              <div class="kfsi-user-attend-my">
+                <div class="kfsi-user-attend-my-head">
+                  <p>
+                    <strong>1급소방안전관리자<span>(혼용)</span></strong
+                    >전북지부
+                  </p>
+                  집합교육:2025.04.14~2025.04.18 (09:00~18:00)
+                </div>
+                <div class="kfsi-user-attend-my-ing">
+                  <strong>- 진행 중인 교육 -</strong>
+                  <p>
+                    <span>2025.04.16</span>
+                    <span>3일차</span>
+                    <span>3교시 (11:00~12:00)</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-15">
+              <h4 class="kfsi-h4">
+                인증숫자를 입력하면 출석체크가 가능합니다.
+              </h4>
+              <div class="kfsi-user-attend-number">
+                <div class="kfsi-user-attend-number-input">
+                  <input type="text" />
+                  <input type="text" />
+                  <input type="text" />
+                </div>
+                <p class="mx-6 text-center">
+                  ※ 앱을 이용한 출석처리가 원활하지 못할 경우, 교육현장에 있는
+                  교수님께 출석체크를 요청해 주세요.
+                </p>
+              </div>
+            </div>
+            <div class="kfsi-user-button mt-10">
+              <button type="button" class="btn btn-primary btn-lg w-100">
+                출석체크 하기
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 5000;
+      "
+    >
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#alert01"
+        >
+          업무용앱 alert (1)
+        </button>
+      </div>
+
+      <div class="mt-1">
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#alert02"
+        >
+          업무용앱 alert (2)
+        </button>
+      </div>
+
+      <div class="mt-1">
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#alert03"
+        >
+          업무용앱 alert (3)
+        </button>
+      </div>
+
+      <div class="mt-1">
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#alert04"
+        >
+          업무용앱 alert (4)
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="alert01"
+      tabindex="-1"
+      aria-labelledby="alert01Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered kfsi-alert">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              2025/04/15일 2교시 출석처리가 <br />
+              <span class="text-info">정상등록</span> 되었습니다.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-lg btn-outline-secondary">
+              닫기
+            </button>
+            <button type="button" class="btn btn-lg btn-primary">
+              출석확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="alert02"
+      tabindex="-1"
+      aria-labelledby="alert01Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered kfsi-alert">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              출석 인증번호가 올바르지 않습니다. <br />
+              번호를 확인해 주세요.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-lg btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="alert03"
+      tabindex="-1"
+      aria-labelledby="alert01Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered kfsi-alert">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>출석 인증 번호를 입력해 주세요.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-lg btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="alert04"
+      tabindex="-1"
+      aria-labelledby="alert01Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered kfsi-alert">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              출석처리 등록이 <span class="text-danger">실패</span>하였습니다.
+              <br />
+              강습현장의 교수님께 출석처리를 문의해 주세요.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-lg btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

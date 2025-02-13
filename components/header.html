@@ -1,0 +1,102 @@
+<div id="skip">
+  <a href="#kfsi-body">본문 내용 바로가기</a>
+</div>
+<header class="kfsi-header">
+  <div class="kfsi-header-sub">
+    <div class="kfsi-header-back">
+      <button onclick="history.back()">뒤로가기</button>
+    </div>
+    <div class="kfsi-header-title"></div>
+    <div class="kfsi-header-button">
+      <a href="../index.html" class="kfsi-header-home">홈</a>
+      <a href="javascript:void(0)" class="kfsi-header-search btn-search-mo"
+        >검색</a
+      >
+    </div>
+    <div class="kfsi-header-head-search">
+      <div class="kfsi-inner">
+        <div class="kfsi-header-head-search-form">
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            placeholder="찾고 싶은 검색어를 입력해 보세요."
+            title="찾고 싶은 검색어를 입력해 보세요."
+          />
+          <button type="button">검색</button>
+        </div>
+        <button class="kfsi-header-head-search-close">닫기</button>
+      </div>
+    </div>
+  </div>
+  <div class="kfsi-header-main">
+    <a href="../index.html" class="kfsi-header-logo"
+      ><img src="./assets/images/mo/logo.svg" alt="한국소방안전원"
+    /></a>
+  </div>
+
+  <div class="kfsi-header-menu">
+    <a
+      href="javascript:void(0)"
+      class="kfsi-header-menu__open"
+      data-bs-toggle="modal"
+      data-bs-target="#menu"
+    >
+      메뉴열기
+    </a>
+  </div>
+</header>
+
+<script>
+  $(document).ready(function () {
+    //menu
+    $('.kfsi-header-menu-list-item-contents dl dt').on('click', function () {
+      if ($(window).width() <= 992) {
+        if (
+          $(this)
+            .parents('dl')
+            .hasClass('kfsi-header-menu-list-item-contents-depth-no')
+        ) {
+        } else {
+          $(this).parents('dl').toggleClass('active');
+          return false;
+        }
+      }
+    });
+
+    $('.kfsi-header-menu-nav-item').on('click', function (e) {
+      $('.kfsi-header-menu-nav-item').removeClass('active');
+
+      $(this).addClass('active');
+
+      $('.kfsi-header-menu-list-item').removeClass('active');
+
+      const targetId = $(this).attr('href').substring(1);
+      $('#' + targetId).addClass('active');
+    });
+
+    $('.kfsi-header-menu-nav-item').on('click', function () {
+      $('.kfsi-header-menu-nav-item').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.kfsi-header-menu__open,.kfsi-header-menu__close').on(
+      'click',
+      function () {
+        $('html').toggleClass('kfsi--menu');
+      }
+    );
+
+    //search
+    $('.kfsi-header .btn-search,.kfsi-header-head-search-close').on(
+      'click',
+      function () {
+        $('html').toggleClass('kfsi--search');
+      }
+    );
+    $('.kfsi-header .btn-search-mo').on('click', function () {
+      $('html').toggleClass('kfsi--search');
+    });
+
+    //header title
+    $('.kfsi-header-title').html($('h1').text());
+  });
+</script>

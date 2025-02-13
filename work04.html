@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국소방안전원</title>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="SHORTCUT ICON" href="./assets/images/k6.ico" />
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="kfsi-work">
+      <div class="kfsi-work-head">
+        <h1>
+          <i class="work-home"></i>
+          <p><strong>홍길동</strong> 교수님의 강의목록</p>
+        </h1>
+      </div>
+      <div class="kfsi-work-info">
+        <div class="kfsi-work-info-text">
+          <p>
+            <strong>
+              1급소방안전관리자<span class="text-primary">(혼용)</span>
+            </strong>
+          </p>
+          <p>전북지부</p>
+          <p>집합교육 : 2025.04.14~2025.04.18 (09:00~18:00)</p>
+        </div>
+      </div>
+      <div class="kfsi-work-body">
+        <div class="kfsi-tab02">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="tab01"
+                data-bs-toggle="tab"
+                data-bs-target="#tab01-pane"
+                type="button"
+                role="tab"
+                aria-controls="tab01-pane"
+                aria-selected="true"
+              >
+                출석 체크
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="tab02"
+                data-bs-toggle="tab"
+                data-bs-target="#tab02-pane"
+                type="button"
+                role="tab"
+                aria-controls="tab02-pane"
+                aria-selected="false"
+              >
+                출결 현황
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="tab03"
+                data-bs-toggle="tab"
+                data-bs-target="#tab03-pane"
+                type="button"
+                role="tab"
+                aria-controls="tab03-pane"
+                aria-selected="false"
+              >
+                자리이동 관리
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="tab04"
+                data-bs-toggle="tab"
+                data-bs-target="#tab04-pane"
+                type="button"
+                role="tab"
+                aria-controls="tab04-pane"
+                aria-selected="false"
+              >
+                외출 관리
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade"
+              id="tab01-pane"
+              role="tabpanel"
+              aria-labelledby="tab01"
+              tabindex="0"
+            >
+              ...
+            </div>
+            <div
+              class="tab-pane fade"
+              id="tab02-pane"
+              role="tabpanel"
+              aria-labelledby="tab02"
+              tabindex="0"
+            >
+              ...
+            </div>
+            <div
+              class="tab-pane fade show active"
+              id="tab03-pane"
+              role="tabpanel"
+              aria-labelledby="tab03"
+              tabindex="0"
+            >
+              <div class="kfsi-work-table">
+                <table>
+                  <colgroup>
+                    <col style="width: 140px" />
+                    <col style="width: 552px" />
+                    <col style="width: 200px" />
+                    <col style="width: 200px" />
+                    <col style="width: 200px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">요청자</th>
+                      <th scope="col">요청 사유</th>
+                      <th scope="col">변경할 자리번호</th>
+                      <th scope="col">처리</th>
+                      <th scope="col">처리 날짜</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>김소방</td>
+                      <td class="text-start">창가 자리에 앉을 수 있을까요?</td>
+                      <td>
+                        <div class="d-inline-flex align-items-center">
+                          <div style="width: 50px">19</div>
+                          <i class="work-arrow-right"></i>
+                          <input
+                            class="form-control ms-4"
+                            type="text"
+                            style="width: 90px"
+                            placeholder="숫자 입력"
+                            value="33"
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          style="width: 140px"
+                        >
+                          승인
+                        </button>
+                      </td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>박방범</td>
+                      <td class="text-start">
+                        친구와 붙어서 앉을 수 있도록 부탁 드려요.
+                      </td>
+                      <td>
+                        <div class="d-inline-flex align-items-center">
+                          <div style="width: 50px" class="text-999">23</div>
+                          <i class="work-arrow-right"></i>
+                          <div style="width: 90px" class="ms-5 text-start">
+                            <strong>10</strong>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-info">승인완료</td>
+                      <td>04.16 11:45</td>
+                    </tr>
+                    <tr>
+                      <td>김교육</td>
+                      <td class="text-start">
+                        시력이 안 좋아서 앞자리에 앉고 싶어요.
+                      </td>
+                      <td>
+                        <div class="d-inline-flex align-items-center">
+                          <div style="width: 50px">41</div>
+                          <i class="work-arrow-right"></i>
+                          <input
+                            class="form-control ms-4"
+                            type="text"
+                            style="width: 90px"
+                            placeholder="숫자 입력"
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          style="width: 140px"
+                        >
+                          승인
+                        </button>
+                      </td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="tab04-pane"
+              role="tabpanel"
+              aria-labelledby="tab04"
+              tabindex="0"
+            >
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
