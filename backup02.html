@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국소방안전원</title>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="SHORTCUT ICON" href="./assets/images/k6.ico" />
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div id="headerMenu"></div>
+    <div class="kfsi kfsi--backup">
+      <div id="header"></div>
+      <div id="kfsi-body">
+        <h1 class="hide">자격·선임 정보</h1>
+        <div class="kfsi-backup">
+          <div>
+            <h4 class="kfsi-h4">안전원 자격·선임 검색</h4>
+            <div class="kfsi-board-write">
+              <table
+                summary="이 테이블은 이름과 생년월일을 입력할 수 있는 두 개의 행으로 구성되어 있습니다."
+              >
+                <caption>
+                  이 테이블은 안전원 자격 및 선임 검색을 위한 입력 폼입니다.
+                </caption>
+                <colgroup>
+                  <col style="width: 110px" />
+                  <col style="" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">이름</th>
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control w-100"
+                        title="이름"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">생년월일</th>
+                    <td>
+                      <input
+                        type="password"
+                        class="form-control w-100"
+                        title="생년월일"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="kfsi-backup-button mt-4">
+              <button type="button" class="btn btn-primary btn-lg w-100">
+                검색하기
+              </button>
+            </div>
+          </div>
+          <div class="mt-12">
+            <h4 class="kfsi-h4 mb-2">안전원 자격∙선임 검색 결과</h4>
+            <div class="mb-1 fs-14 text-end">
+              조회건수 : <strong>1</strong>건
+            </div>
+            <div class="kfsi-backup-table">
+              <table>
+                <colgroup>
+                  <col style="width: 80px;">
+                  <col style="width: 208px;">
+                  <col style="width: 70px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">이름</th>
+                    <th scope="col">생년월일</th>
+                    <th scope="col">선택</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>홍길동</td>
+                    <td>1990.01.01</td>
+                    <td>
+                      <button type="button" class="btn btn-outline-dark">
+                        선택
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mt-12">
+              <div class="py-5 px-3 bg-light rounded-3">
+                <div>
+                  <strong class="d-block mb-3 fs-17 text-primary">
+                    안전원 자격∙선임 정보
+                  </strong>
+                  <div class="kfsi-board-write">
+                    <table
+                      summary="이 테이블은 이름과 생년월일을 입력할 수 있는 두 개의 행으로 구성되어 있습니다."
+                    >
+                      <caption>
+                        이 테이블은 안전원 자격 및 선임 검색을 위한 입력
+                        폼입니다.
+                      </caption>
+                      <colgroup>
+                        <col style="width: 110px" />
+                        <col style="" />
+                        <col style="width: 88px" />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">이름</th>
+                          <td>김소방</td>
+                          <td rowspan="2" class="border-start">
+                            <img
+                              src="./assets/images/backup/default.svg"
+                              alt=""
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">생년월일</th>
+                          <td>1980.01.01</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="mt-10">
+                  <strong class="d-block mb-0 fs-17 text-primary">
+                    자격정보
+                  </strong>
+                  <div class="mb-1 fs-14 text-end">
+                    전체 : <strong>1</strong>건
+                  </div>
+                  <div class="kfsi-backup-table">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col">자격증명</th>
+                          <th scope="col">자격번호</th>
+                          <th scope="col">취득일</th>
+                          <th scope="col">발행기간</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>소방설비기사(전기분야)</td>
+                          <td>111111111H</td>
+                          <td>2009. 01.01</td>
+                          <td>한국산업 인력공단</td>
+                        </tr>
+                        <tr>
+                          <td>1급 소방안전관리자</td>
+                          <td>111110000H</td>
+                          <td>2009. 01.01</td>
+                          <td>한국소방안전원</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="mt-10">
+                  <strong class="d-block mb-3 fs-17 text-primary">
+                    선임정보
+                  </strong>
+                  <div class="kfsi-board-write">
+                    <table summary="">
+                      <caption></caption>
+                      <colgroup>
+                        <col style="width: 110px" />
+                        <col style="" />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">NO</th>
+                          <td>1</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">대상구분</th>
+                          <td>소방기술자</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">대상물명</th>
+                          <td>한국소방원</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">대상물 연락처</th>
+                          <td>02-000-0000</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">주소</th>
+                          <td>
+                            <div class="py-3">
+                              (12345)<br />
+                              서울시 강남구 도산대로 523 한성빌딩 106호
+                              <div class="mt-3">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm w-100"
+                                >
+                                  상세보기
+                                </button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">선임일자</th>
+                          <td>2024-00-00</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">주 보조 구분</th>
+                          <td>주</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
