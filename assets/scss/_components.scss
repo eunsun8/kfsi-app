@@ -1098,6 +1098,79 @@ $mobileWidth: 3992px;
       }
     }
   }
+  &-modal-calendar {
+    justify-content: center;
+    .modal-content {
+      width: 358px;
+      padding: 50px 24px 24px;
+      border-radius: 20px;
+      border: solid 1px #ccc;
+      background-color: #fff;
+    }
+    .modal-body {
+      padding: 0;
+    }
+    .btn-close {
+      position: absolute;
+      top: 0px;
+      right: 6px;
+      width: 50px;
+      height: 50px;
+    }
+    .flatpickr-current-month {
+      padding-top: 12px;
+    }
+    .flatpickr-months {
+      margin-bottom: 20px;
+    }
+    .flatpickr-weekdaycontainer .flatpickr-weekday:first-child {
+      color: #d93600 !important;
+    }
+    .flatpickr-weekdaycontainer .flatpickr-weekday:last-child {
+      color: #168df5 !important;
+    }
+    .flatpickr-day {
+      &.sunday {
+        color: #d93600;
+      }
+      &.saturday {
+        color: #168df5;
+      }
+    }
+    .flatpickr-current-month {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+    .flatpickr-current-month input.cur-year {
+      margin: 0 10px 0 0;
+      padding: 0;
+    }
+    .flatpickr-current-month .numInputWrapper {
+      width: 78px;
+    }
+    .arrowUp,
+    .arrowDown {
+      opacity: 1;
+    }
+    .flatpickr-day.selected {
+      border-color: #0f6327;
+      background-color: #0f6327;
+      color: #fff !important;
+    }
+    .flatpickr-month {
+      .numInputWrapper {
+        &::after {
+          content: '년';
+          display: block;
+          position: absolute;
+          top: 3px;
+          right: 16px;
+          color: #000;
+        }
+      }
+    }
+  }
   &-textlist {
     margin-left: 10px;
     ul {
@@ -1720,5 +1793,44 @@ $mobileWidth: 3992px;
         }
       }
     }
+  }
+}
+
+.date-picker-input,
+.time-picker-input {
+  background: #fff url(./../images/icon/calendar.svg) no-repeat
+    calc(100% - 10px) 50% !important;
+}
+.date-picker-inline {
+  .flatpickr-input {
+    display: none;
+  }
+  .flatpickr-calendar {
+    margin: 0 auto;
+    box-shadow: none;
+  }
+}
+.ap-layout-popup .ap-cont {
+width: 358px;
+border-radius: 20px;
+box-shadow: none;
+
+}
+.ap-theme-default .ap-header {
+  display: none;
+}
+.ap-theme-default .ap-component-selector {
+  border-color: #004D16;
+}
+.ap-theme-default .ap-content-middle {
+  padding-top: 24px;
+}
+.ap-theme-default .ap-footer {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding: 0 24px 24px;
+  .btn {
+    margin: 3.75px;
   }
 }

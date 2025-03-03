@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국소방안전원</title>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+    <!-- flat -->
+    <script src="./assets/js/flatpickr.min.js"></script>
+    <script src="./assets/js/ko.js"></script>
+    <link rel="stylesheet" href="./assets/js/flatpickr.min.css" />
+    <!-- anypicker -->
+    <script src="./assets/js/anypicker.min.js"></script>
+    <link rel="stylesheet" href="./assets/js/anypicker.min.css" />
+
+    <link rel="SHORTCUT ICON" href="./assets/images/k6.ico" />
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div id="headerMenu"></div>
+    <div class="kfsi kfsi--work">
+      <div id="header"></div>
+      <div id="kfsi-body">
+        <h1 class="hide">휴가 신청</h1>
+        <div style="padding: 30px 16px 60px">
+          <div class="mb-10">
+            <div class="p-6 border border-primary rounded-3 text-center">
+              나의 남은 휴가 <strong class="mx-1 text-primary">15일</strong>
+              <span class="text-666">(연가 13일 / 저축 2일)</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="kfsi-h4">신청 구분</h4>
+            <div class="kfsi-tab01 kfsi-tab01--mo-grid3">
+              <ul class="nav nav-tabs mb-5" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="tab01"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tab01-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab01-pane"
+                    aria-selected="true"
+                  >
+                    휴가
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="tab02"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tab02-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab02-pane"
+                    aria-selected="false"
+                  >
+                    반차
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="tab03"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tab03-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab03-pane"
+                    aria-selected="false"
+                  >
+                    외출
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div
+                  class="tab-pane fade show active"
+                  id="tab01-pane"
+                  role="tabpanel"
+                  aria-labelledby="tab01"
+                  tabindex="0"
+                >
+                  <div class="py-5 px-2 bg-light rounded-3">
+                    <div class="kfsi-board-write">
+                      <table
+                        summary="이 표는 사용자가 휴가 유형, 소진할 휴가 종류, 시작일과 종료일을 선택하고, 선택된 휴가 기간을 표시하는 기능을 제공합니다."
+                      >
+                        <caption>
+                          휴가 신청서
+                        </caption>
+                        <colgroup>
+                          <col style="width: 110px" />
+                          <col style="" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">휴가 구분</th>
+                            <td>
+                              <div class="d-flex flex-column gap-2 my-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1-01"
+                                    id="radio1-01-1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="radio1-01-1"
+                                  >
+                                    연가
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1-01"
+                                    id="radio1-01-02"
+                                    checked
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="radio1-01-02"
+                                  >
+                                    공가
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1-01"
+                                    id="radio1-01-03"
+                                    checked
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="radio1-01-03"
+                                  >
+                                    특별휴가
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1-01"
+                                    id="radio1-01-04"
+                                    checked
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="radio1-01-04"
+                                  >
+                                    기타
+                                  </label>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              소진할 휴가<br />
+                              선택
+                            </th>
+                            <td>
+                              <div class="d-flex flex-column gap-2 my-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1-02"
+                                    id="radio1-02-1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="radio1-02-1"
+                                  >
+                                    연가휴가
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio1-02"
+                                    id="radio1-02-02"
+                                    checked
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="radio1-02-02"
+                                  >
+                                    저축휴가
+                                  </label>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">시작일</th>
+                            <td>
+                              <input
+                                type="text"
+                                class="form-control w-100 date-picker-input"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal01"
+                                title="시작일"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">종료일</th>
+                            <td>
+                              <input
+                                type="text"
+                                class="form-control w-100 date-picker-input"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal01"
+                                title="종료일"
+                              />
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="2" class="p-3 text-center">
+                              선택한 기간 :
+                              <strong class="ms-1 fs-18 text-primary"
+                                >5일</strong
+                              >
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="tab02-pane"
+                  role="tabpanel"
+                  aria-labelledby="tab02"
+                  tabindex="0"
+                >
+                  <div class="py-5 px-2 bg-light rounded-3">
+                    <div class="kfsi-board-write">
+                      <table
+                        summary="이 표는 사용자가 반차 구분(오전 또는 오후)을 선택하고, 대상일을 설정하며, 선택된 반차 기간을 표시하는 기능을 제공합니다."
+                      >
+                        <caption>
+                          반차 신청서
+                        </caption>
+                        <colgroup>
+                          <col style="width: 110px" />
+                          <col style="" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">반차 구분</th>
+                            <td>
+                              <div class="d-flex flex-column gap-2 my-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio2-01"
+                                    id="radio2-01-1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="radio2-01-1"
+                                  >
+                                    오전
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="radio2-01"
+                                    id="radio2-01-02"
+                                    checked
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="radio2-01-02"
+                                  >
+                                    오후
+                                  </label>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <th scope="row">대상일</th>
+                            <td>
+                              <input
+                                type="text"
+                                class="form-control w-100 date-picker-input"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal01"
+                                title="대상일"
+                              />
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="2" class="p-3 text-center">
+                              선택한 기간 :
+                              <strong class="ms-1 fs-18 text-primary"
+                                >5일</strong
+                              >
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="tab03-pane"
+                  role="tabpanel"
+                  aria-labelledby="tab03"
+                  tabindex="0"
+                >
+                  <div class="py-5 px-2 bg-light rounded-3">
+                    <div class="kfsi-board-write">
+                      <table
+                        summary="이 표는 사용자가 대상일, 시작시간, 종료시간을 설정하고, 선택된 기간을 표시하는 기능을 제공합니다."
+                      >
+                        <caption>
+                          시간 설정
+                        </caption>
+                        <colgroup>
+                          <col style="width: 110px" />
+                          <col style="" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">대상일</th>
+                            <td>
+                              <input
+                                type="text"
+                                class="form-control w-100 date-picker-input"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal01"
+                                title="대상일"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">시작시간</th>
+                            <td>
+                              <input
+                                type="text"
+                                class="form-control w-100 time-picker-input"
+                                title="시작시간"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">종료시간</th>
+                            <td>
+                              <input
+                                type="text"
+                                class="form-control w-100 time-picker-input"
+                                title="종료시간"
+                              />
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="2" class="p-3 text-center">
+                              선택한 기간 :
+                              <strong class="ms-1 fs-18 text-primary"
+                                >5일</strong
+                              >
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-4 fs-14">
+                ※ 모바일 앱에서 신청한 휴가, 반차, 외출은 PC 업무 시스템에서도
+                확인할 수 있습니다.
+              </div>
+              <div class="kfsi-board-write">
+                <table summary="">
+                  <caption></caption>
+                  <colgroup>
+                    <col style="width: 110px" />
+                    <col style="" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        이미지 <br />
+                        파일첨부
+                      </th>
+                      <td>
+                        <div class="d-flex gap-2 my-2">
+                          <button
+                            type="button"
+                            class="btn btn-outline-secondary w-100"
+                            style="height: 80px"
+                          >
+                            <img
+                              src="./assets/images/icon/file-img.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-outline-secondary w-100"
+                            style="height: 80px"
+                          >
+                            <img
+                              src="./assets/images/icon/file-camera.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="kfsi-button">
+                <p>
+                  <button type="button" class="btn btn-primary">
+                    전자 결재
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="modal01"
+      tabindex="-1"
+      aria-labelledby="alert01Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered kfsi-modal-calendar">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body">
+            <div class="date-picker-inline">
+              <input type="text" class="form-control w-100" />
+              <script>
+                let activeInput = null; // ✅ 현재 활성화된 input을 저장할 변수
+
+                // 모든 date-picker-input 요소에 클릭 이벤트 추가
+                document
+                  .querySelectorAll('.date-picker-input')
+                  .forEach((input) => {
+                    input.addEventListener('click', function () {
+                      activeInput = this; // ✅ 현재 클릭된 input 저장
+                    });
+                  });
+
+                // Flatpickr 적용 (모달 내 달력)
+                $('.date-picker-inline .form-control').flatpickr({
+                  locale: 'ko',
+                  inline: true,
+                  onDayCreate: function (dObj, dStr, fp, dayElem) {
+                    if (
+                      dayElem.classList.contains('prevMonthDay') ||
+                      dayElem.classList.contains('nextMonthDay')
+                    ) {
+                      return;
+                    }
+
+                    const date = new Date(dayElem.dateObj);
+                    const day = date.getDay();
+
+                    if (day === 0) {
+                      dayElem.classList.add('sunday');
+                    } else if (day === 6) {
+                      dayElem.classList.add('saturday');
+                    }
+                  },
+                  onChange: function (selectedDates, dateStr, instance) {
+                    if (activeInput) {
+                      activeInput.value = dateStr; // ✅ 현재 선택된 input의 값 변경
+                    }
+                  },
+                });
+              </script>
+            </div>
+          </div>
+          <div class="modal-footer mt-5 p-0">
+            <button
+              type="button"
+              class="btn btn-lg btn-outline-secondary"
+              style="min-width: 140px"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              취소
+            </button>
+            <button
+              type="button"
+              class="btn btn-lg btn-primary"
+              style="min-width: 140px"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              선택
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $('.time-picker-input').AnyPicker({
+          mode: 'datetime',
+          dateTimeFormat: 'AA hh:mm',
+        });
+      });
+    </script>
+  </body>
+</html>

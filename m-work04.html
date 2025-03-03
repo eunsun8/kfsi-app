@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국소방안전원</title>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- tree -->
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <script src="./assets/js/jquery.tree-multiselect.min.js"></script>
+    <link rel="stylesheet" href="./assets/js/jquery.tree-multiselect.min.css" />
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="SHORTCUT ICON" href="./assets/images/k6.ico" />
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div id="headerMenu"></div>
+    <div class="kfsi kfsi--work">
+      <div id="header"></div>
+      <div id="kfsi-body">
+        <h1 class="hide">메일쓰기</h1>
+        <div class="kfsi-mail">
+          <div class="kfsi-mail-write">
+            <div class="kfsi-mail-write-item">
+              <div class="kfsi-mail-write-item-head">
+                <strong>받는사람</strong>
+                <button
+                  class="btn btn-secondary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal01"
+                >
+                  조직도
+                </button>
+              </div>
+              <div class="kfsi-mail-write-item-box">
+                <p><span>김(kim@kfsi.or.kr)</span>,</p>
+                <p><span>김원장(kim@com)</span>,</p>
+                <p><span>김원장(kim@kfsi.or.kr)</span></p>
+              </div>
+            </div>
+            <div class="kfsi-mail-write-item">
+              <div class="kfsi-mail-write-item-head">
+                <strong>참조</strong>
+                <button
+                  class="btn btn-secondary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal01"
+                >
+                  조직도
+                </button>
+              </div>
+              <div class="kfsi-mail-write-item-box">
+                <p><span>김(kim@kfsi.or.kr)</span>,</p>
+                <p><span>김원장(kim@com)</span>,</p>
+                <p><span>김원장(kim@kfsi.or.kr)</span></p>
+              </div>
+            </div>
+            <div class="kfsi-mail-write-item">
+              <div class="kfsi-mail-write-item-head">
+                <strong>제목</strong>
+              </div>
+              <input
+                type="text"
+                class="form-control w-100"
+                placeholder="제목을 입력해 주세요."
+              />
+            </div>
+            <div class="kfsi-mail-write-item">
+              <div class="kfsi-mail-write-item-head">
+                <strong>내용</strong>
+              </div>
+              <textarea
+                class="form-control w-100"
+                placeholder="제목을 입력해 주세요."
+                style="height: 300px"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="kfsi-board-write">
+              <table summary="">
+                <caption></caption>
+                <colgroup>
+                  <col style="width: 110px" />
+                  <col style="" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      이미지 <br />
+                      파일첨부
+                    </th>
+                    <td>
+                      <div class="d-flex gap-2 my-2">
+                        <button
+                          type="button"
+                          class="btn btn-outline-secondary w-100"
+                          style="height: 80px"
+                        >
+                          <img src="./assets/images/icon/file-img.svg" alt="" />
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-secondary w-100"
+                          style="height: 80px"
+                        >
+                          <img
+                            src="./assets/images/icon/file-camera.svg"
+                            alt=""
+                          />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="kfsi-board-file">
+                <ul>
+                  <li>
+                    <a href="">첨부파일명.JPG</a>
+                    <button>삭제</button>
+                  </li>
+                  <li>
+                    <a href="">첨부파일명.JPG</a>
+                    <button>삭제</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="kfsi-button">
+              <p>
+                <button type="button" class="btn btn-primary">보내기</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 5000;
+      "
+    >
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#modal01"
+        >
+          조직도
+        </button>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal01" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered kfsi-modal-group">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="kfsi-modal-group-list">
+              <select id="test-select" multiple="multiple">
+                <option value="김지수" data-section="경영관리과">김지수</option>
+                <option value="박준영" data-section="경영관리과">박준영</option>
+                <option value="김지수" data-section="경영관리과">이서연</option>
+                <option value="박준영" data-section="경영관리과">최민석</option>
+                <option value="강지혜" data-section="정책연구과">강지혜</option>
+                <option value="정우진" data-section="정책연구과">정우진</option>
+                <option value="조윤아" data-section="정책연구과">조윤아</option>
+                <option value="한지민" data-section="정책연구과">한지민</option>
+                <option value="오세진" data-section="재무회계과">오세진</option>
+                <option value="송하영" data-section="재무회계과">송하영</option>
+                <option value="문유진" data-section="재무회계과">문유진</option>
+                <option value="김태훈" data-section="재무회계과">김태훈</option>
+                <option value="박나연" data-section="교육운영과">박나연</option>
+                <option value="이한솔" data-section="교육운영과">이한솔</option>
+                <option value="김민주" data-section="교육운영과">김민주</option>
+                <option value="조성호" data-section="교육운영과">조성호</option>
+                <option value="최진아" data-section="고객지원과">최진아</option>
+                <option value="정석현" data-section="고객지원과">정석현</option>
+                <option value="강민영" data-section="고객지원과">강민영</option>
+                <option value="윤찬호" data-section="고객지원과">윤찬호</option>
+              </select>
+              <script>
+                var tree1 = $('#test-select').treeMultiselect({
+                  enableSelectAll: false,
+                  sortable: false,
+                });
+              </script>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-lg"
+              style="min-width: 140px"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              style="min-width: 140px"
+              data-bs-dismiss="modal"
+            >
+              적용
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
