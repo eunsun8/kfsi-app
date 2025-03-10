@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국소방안전원</title>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+    <!-- flat -->
+    <script src="./assets/js/flatpickr.min.js"></script>
+    <script src="./assets/js/ko.js"></script>
+    <link rel="stylesheet" href="./assets/js/flatpickr.min.css" />
+    <!-- anypicker -->
+    <script src="./assets/js/anypicker.min.js"></script>
+    <link rel="stylesheet" href="./assets/js/anypicker.min.css" />
+
+    <link rel="SHORTCUT ICON" href="./assets/images/k6.ico" />
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="kfsi--wrap-t sub-wrap">
+      <div id="skip">
+        <a href="#kfsi-body">본문 내용 바로가기</a>
+      </div>
+
+      <!-- header -->
+      <header class="kfsi-header-t">
+        <div class="kfsi-header-t-home">
+          <a href="" class="btn-home">home</a>
+        </div>
+        <div class="kfsi-header-t-util">
+          <a href="" class="btn-close">close</a>
+        </div>
+      </header>
+
+      <script>
+        $(document).ready(function () {
+          //header title
+          $('.kfsi-header-t-tit').html($('h1').text());
+        });
+      </script>
+      <!-- //header -->
+      
+      <div id="kfsi-body">
+        <h1 class="hide">공지사항</h1>
+
+        <div class="kfsi-sub-cont">
+          <div class="board-cont">
+            <div class="board-view">
+              <div class="board-view-head">
+                <div class="board-view-head-title">
+                  <span class="cdt">공지사항</span>
+                  <strong class="tit">시스템 점검 안내 (2023년 10월 1일 00시 ~ 06시)</strong>
+                </div>
+                <div class="board-view-head-category">
+                  <dl class="cate">
+                    <dt>작성일</dt>
+                    <dd>2024.10.02</dd>
+
+                    <dt>조회수</dt>
+                    <dd>155</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="board-view-body">
+                안녕하세요, 업무용앱 관리자 입니다. <br><br>
+
+                보다 안정적인 서비스 제공을 위해 아래와 같이 시스템 점검을 진행할 예정입니다.<br><br>
+
+                점검 일시: 2025년 10월 1일(일요일) 00시부터 06시까지 (총 6시간)<br><br>
+
+                점검 내용: 서버 안정화 작업 및 보안 업데이트<br><br>
+
+                영향 범위: 점검 시간 동안 앱 접속 불가 및 일부 기능 제한
+              </div>
+            </div>
+
+            <div class="board-button">
+              <a href="" class="btn btn-outline-dark btn-lg">목록</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국소방안전원</title>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+    <!-- flat -->
+    <script src="./assets/js/flatpickr.min.js"></script>
+    <script src="./assets/js/ko.js"></script>
+    <link rel="stylesheet" href="./assets/js/flatpickr.min.css" />
+    <!-- anypicker -->
+    <script src="./assets/js/anypicker.min.js"></script>
+    <link rel="stylesheet" href="./assets/js/anypicker.min.css" />
+
+    <link rel="SHORTCUT ICON" href="./assets/images/k6.ico" />
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="kfsi--wrap-t perm-wrap">
+      <div id="skip">
+        <a href="#kfsi-body">본문 내용 바로가기</a>
+      </div>
+
+      <!-- header -->
+      <header class="kfsi-header-t">
+        <div class="kfsi-header-t-home">
+          <a href="" class="btn-home">home</a>
+        </div>
+        <div class="kfsi-header-t-util">
+          <a href="" class="btn-close">close</a>
+        </div>
+      </header>
+
+      <script>
+        $(document).ready(function () {
+          //header title
+          $('.kfsi-header-t-tit').html($('h1').text());
+        });
+      </script>
+      <!-- //header -->
+      
+      <div id="kfsi-body">
+        <h1 class="hide">한국소방안전원</h1>
+
+        <div class="perm-cont">
+          <div class="ico-logo-lg mid perm-cont-tit">한국소방안전원</div>
+
+          <p class="perm-cont-txt">업무용앱 이용을 위해 아래 권한을 허용해 주세요.</p>
+
+          <div class="perm-group">
+            <ul class="perm-group-list">
+              <li>
+                <span class="ico-perm"><img src="./assets/images/tb/ico-folder.svg" alt=""></span>
+                <div class="detall">
+                  <strong>권한명</strong>
+                  <span>앱 사용 시 제어를 위해 필요한 권한이 필요합니다.
+                    앱 사용 시 제어를 위해 필요한 권한이 필요합니다.
+                    </span>
+                </div>
+              </li>
+              <li>
+                <span class="ico-perm"><img src="./assets/images/tb/ico-tel.svg" alt=""></span>
+                <div class="detall">
+                  <strong>권한명</strong>
+                  <span>앱 사용 시 제어를 위해 필요한 권한이 필요합니다.</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="perm-group-button">
+              <a href="" class="w-100 btn btn-bg-green btn-lg">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
